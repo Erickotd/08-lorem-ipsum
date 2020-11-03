@@ -22,7 +22,6 @@ function App() {
   const handlerChange = (e) => {
     setCount(e.target.value);
   };
-
   return (
     <section className="section-center">
       <h3>Tired of boring lorem ipsuma?</h3>
