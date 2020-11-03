@@ -12,6 +12,7 @@ function App() {
     if (amount > 8) amount = 8;
     let lorem = data.slice(0, amount);
     setText(lorem);
+    setCount(0);
   };
 
   const clearText = () => {
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <section className="section-center">
-      <h3>Tired of boring lorem ipsum?</h3>
+      <h3>Tired of boring lorem ipsuma?</h3>
       <form className="lorem-form" onSubmit={handlerSubmit}>
         <label htmlFor="amount">Paragraphs</label>
         <input
@@ -39,7 +40,7 @@ function App() {
         </button>
       </form>
       {text.map((paragraph, index) => {
-        return <p>{paragraph}</p>;
+        return <p key={index}>{paragraph}</p>;
       })}
     </section>
   );
